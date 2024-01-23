@@ -130,6 +130,7 @@ PARAM_COOLING_FLOW_TEMP = "ch_cooling_flow_temp"
 PARAM_COOLING_FLOW_OFFSET = "ch_cooling_flow_offset"
 PARAM_CH_DEROGA_TEMPERATURE = "ch_deroga_temperature"
 PARAM_VERSION = 'integration_version'
+PARAM_RESISTOR = "hp_resistor"
 
 ZONED_PARAMS = [
     PARAM_CH_FLAME,

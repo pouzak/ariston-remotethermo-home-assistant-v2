@@ -27,7 +27,8 @@ from .const import (
     PARAM_CH_PILOT,
     VALUE,
     VAL_ON,
-    ZONED_PARAMS
+    ZONED_PARAMS,
+    PARAM_RESISTOR
 )
 
 BINARY_SENSOR_CH_FLAME = "CH Flame"
@@ -42,6 +43,7 @@ BINARY_SENSOR_INTERNET_TIME = "Internet Time"
 BINARY_SENSOR_INTERNET_WEATHER = "Internet Weather"
 BINARY_SENSOR_THERMAL_CLEANSE_FUNCTION = "Thermal Cleanse Function"
 BINARY_SENSOR_CH_PILOT = "CH Pilot"
+BINARY_SENSOR_RESISTOR = "Resistor"
 
 SCAN_INTERVAL = timedelta(seconds=2)
 
@@ -69,6 +71,7 @@ binary_sensors_default = {
         "mdi:allergy",
     ),
     PARAM_CH_PILOT: (BINARY_SENSOR_CH_PILOT, None, "mdi:head-cog-outline"),
+    PARAM_RESISTOR: (BINARY_SENSOR_RESISTOR, None, "mdi:resistor"),
 }
 BINARY_SENSORS = deepcopy(binary_sensors_default)
 for param in binary_sensors_default:

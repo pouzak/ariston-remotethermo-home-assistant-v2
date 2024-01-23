@@ -256,6 +256,7 @@ Order of Installation:
   - `internet_weather` - Internet weather status. **WORKS ONLY ON SPECIFIC MODELS WHILE ON OTHERS CAUSES CRASHES**
   - `changing_data` - API is attempting to configure requested data. **API specific sensor**.
   - `online` - Online status. Indicates if API has communication with the heater. **API specific sensor**.
+  - `hp_resistor` - Heat pump resistors status.
 
 
 ### Example of configuration.yaml entry

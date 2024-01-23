@@ -156,6 +156,7 @@ class AristonHandler:
     _PARAM_HEATING_FLOW_OFFSET = "ch_heating_flow_offset"
     _PARAM_COOLING_FLOW_TEMP = "ch_cooling_flow_temp"
     _PARAM_COOLING_FLOW_OFFSET = "ch_cooling_flow_offset"
+    _PARAM_RESISTOR = "hp_resistor"
 
     # Ariston parameter codes in the menu
     _ARISTON_DHW_COMFORT_TEMP = "U6_9_0"
@@ -231,6 +232,9 @@ class AristonHandler:
     _ARISTON_PAR_DHW_COMFORT_TEMP = "DhwTimeProgComfortTemp"
     _ARISTON_PAR_DHW_ECONOMY_TEMP = "DhwTimeProgEconomyTemp"
     _ARISTON_PAR_HEAT_PUMP = 'IsHeatingPumpOn'
+    _ARISTON_PAR_RESISTOR = 'IsResistorOn'
+    # _ARISTON_PAR_DHW_BOOST = 'IsDhwBoost'
+    # _ARISTON_PAR_HP_QUITE_MODE = 'IsQuite'
 
     # Parameters in Android api within zone 0, mapping to parameter names
     _MAP_ARISTON_ZONE_0_PARAMS = {
@@ -247,6 +251,7 @@ class AristonHandler:
         _PARAM_DHW_ECONOMY_TEMPERATURE: _ARISTON_PAR_DHW_ECONOMY_TEMP,
         _PARAM_DHW_STORAGE_TEMPERATURE: _ARISTON_PAR_DHW_STORAGE_TEMP,
         _PARAM_HEAT_PUMP: _ARISTON_PAR_HEAT_PUMP,
+        _PARAM_RESISTOR: _ARISTON_PAR_RESISTOR
     }
     # Parameters in Android api within zone 1, mapping to parameter names
     _MAP_ARISTON_MULTIZONE_PARAMS = {
