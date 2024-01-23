@@ -1833,6 +1833,9 @@ class AristonHandler:
 
                         original_parameter, zone = self._zone_sensor_split(parameter)
                         set_value = self._set_param[parameter][self._SET_VALUE]
+                        if original_parameter == self._PARAM_CH_FIXED_TEMP:
+                            self._set_param[parameter][self._VALUE] = float(self._set_param[parameter][self._VALUE])
+                            set_value = float(set_value)
                         self._LOGGER.info(f'Setting {parameter} new value {self._set_param[parameter][self._VALUE]} [{set_value}]')
                         
                         if original_parameter == self._PARAM_MODE:
@@ -1953,14 +1956,22 @@ class AristonHandler:
                         elif original_parameter in self._LIST_ARISTON_WEB_PARAMS:
 
                             # Many parameters in one request
-                            
-                            set_additional_params.append(
-                                {
-                                    "id": self._MAP_ARISTON_WEB_MENU_PARAMS[parameter],
-                                    "value": set_value,
-                                    "prevValue": self._string_option_to_number(parameter, self._get_sensor_value(parameter))
-                                }
-                            )
+                            if original_parameter == self._PARAM_CH_FIXED_TEMP:
+                                set_additional_params.append(
+                                    {
+                                        "id": self._MAP_ARISTON_WEB_MENU_PARAMS[parameter],
+                                        "value": set_value,
+                                        "prevValue": self._get_sensor_value(parameter)
+                                    }
+                                )
+                            else:
+                                 set_additional_params.append(
+                                    {
+                                        "id": self._MAP_ARISTON_WEB_MENU_PARAMS[parameter],
+                                        "value": set_value,
+                                        "prevValue": self._string_option_to_number(parameter, self._get_sensor_value(parameter))
+                                    }
+                                )
 
                         else:
                             self._LOGGER.error(f"Unsupported parameter to set {parameter}")
