@@ -152,6 +152,8 @@ Order of Installation:
   - `internet_weather` - turn off and on fetching of weather from internet. **WORKS ONLY ON SPECIFIC MODELS WHILE ON OTHERS CAUSES CRASHES**
   - `ch_auto_function` - turn off and on Auto function.
   - `dhw_thermal_cleanse_function` - DHW thermal cleanse function enabled.
+  - `hp_quiete_mode` - turn off and on heat pump silent mode.
+  - `dhw_boost` - DHW temporary boost mode (automatically turns off after it reaches desired comfort temperature).
 
 #### Selectors
 **Some parameters are not supported on all models**
@@ -257,6 +259,8 @@ Order of Installation:
   - `changing_data` - API is attempting to configure requested data. **API specific sensor**.
   - `online` - Online status. Indicates if API has communication with the heater. **API specific sensor**.
   - `hp_resistor` - Heat pump resistors status.
+  - `hp_quiete_mode` - Heat pump silent mode status.
+  - `dhw_boost` - DHW boost ongoing.
 
 
 ### Example of configuration.yaml entry

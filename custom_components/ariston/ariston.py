@@ -157,6 +157,8 @@ class AristonHandler:
     _PARAM_COOLING_FLOW_TEMP = "ch_cooling_flow_temp"
     _PARAM_COOLING_FLOW_OFFSET = "ch_cooling_flow_offset"
     _PARAM_RESISTOR = "hp_resistor"
+    _PARAM_DHW_BOOST = "dhw_boost"
+    _PARAM_QUIETE_MODE = "hp_quiete_mode"
 
     # Ariston parameter codes in the menu
     _ARISTON_DHW_COMFORT_TEMP = "U6_9_0"
@@ -204,6 +206,8 @@ class AristonHandler:
     _ARISTON_CH_FIXED_TEMP = "U6_3_0_1"
     _ARISTON_CH_FIXED_TEMP_ZONE_2 = "U6_3_0_3"
     _ARISTON_CH_FIXED_TEMP_ZONE_3 = "U6_3_0_5"
+    _ARISTON_DHW_BOOST = "U6_9_10"
+    _ARISTON_QUIETE_MODE = "U6_15_0_1"
 
     # Ariston parameters in Android api
     _ARISTON_PAR_PRESSURE = 'HeatingCircuitPressure'
@@ -233,8 +237,8 @@ class AristonHandler:
     _ARISTON_PAR_DHW_ECONOMY_TEMP = "DhwTimeProgEconomyTemp"
     _ARISTON_PAR_HEAT_PUMP = 'IsHeatingPumpOn'
     _ARISTON_PAR_RESISTOR = 'IsResistorOn'
-    # _ARISTON_PAR_DHW_BOOST = 'IsDhwBoost'
-    # _ARISTON_PAR_HP_QUITE_MODE = 'IsQuite'
+    _ARISTON_PAR_DHW_BOOST = 'IsDhwBoost'
+    _ARISTON_PAR_HP_QUIETE_MODE = 'IsQuite'
 
     # Parameters in Android api within zone 0, mapping to parameter names
     _MAP_ARISTON_ZONE_0_PARAMS = {
@@ -251,7 +255,9 @@ class AristonHandler:
         _PARAM_DHW_ECONOMY_TEMPERATURE: _ARISTON_PAR_DHW_ECONOMY_TEMP,
         _PARAM_DHW_STORAGE_TEMPERATURE: _ARISTON_PAR_DHW_STORAGE_TEMP,
         _PARAM_HEAT_PUMP: _ARISTON_PAR_HEAT_PUMP,
-        _PARAM_RESISTOR: _ARISTON_PAR_RESISTOR
+        _PARAM_RESISTOR: _ARISTON_PAR_RESISTOR,
+        _PARAM_DHW_BOOST: _ARISTON_PAR_DHW_BOOST,
+        _PARAM_QUIETE_MODE: _ARISTON_PAR_HP_QUIETE_MODE
     }
     # Parameters in Android api within zone 1, mapping to parameter names
     _MAP_ARISTON_MULTIZONE_PARAMS = {
@@ -281,6 +287,8 @@ class AristonHandler:
         # _PARAM_DHW_COMFORT_TEMPERATURE: _ARISTON_DHW_TIME_PROG_COMFORT,
         # _PARAM_DHW_ECONOMY_TEMPERATURE: _ARISTON_DHW_TIME_PROG_ECONOMY,
         _PARAM_CH_FIXED_TEMP: _ARISTON_CH_FIXED_TEMP,
+        _PARAM_DHW_BOOST: _ARISTON_DHW_BOOST,
+        _PARAM_QUIETE_MODE: _ARISTON_QUIETE_MODE
     }
     _LIST_ARISTON_API_PARAMS = [
         *_MAP_ARISTON_ZONE_0_PARAMS.keys(),
@@ -392,6 +400,8 @@ class AristonHandler:
         _PARAM_INTERNET_TIME,
         _PARAM_INTERNET_WEATHER,
         _PARAM_DHW_MODE,
+        _PARAM_DHW_BOOST,
+        _PARAM_QUIETE_MODE
     ]
 
     @staticmethod

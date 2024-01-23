@@ -15,7 +15,9 @@ from .const import (
     VALUE,
     VAL_OFF,
     VAL_ON,
-    ZONED_PARAMS
+    ZONED_PARAMS,
+    PARAM_DHW_BOOST,
+    PARAM_HP_QUIETE_MODE
 )
 
 SWITCH_CH_AUTO_FUNCTION = "CH Auto Function"
@@ -23,6 +25,8 @@ SWITCH_INTERNET_TIME = "Internet Time"
 SWITCH_INTERNET_WEATHER = "Internet Weather"
 SWITCH_THERMAL_CLEANSE_FUNCTION = "Thermal Cleanse Function"
 SWITCH_POWER = "Power"
+SWITCH_DHW_BOOST = "DHW Boost"
+SWITCH_HP_QUIETE_MODE = "HP Silent mode"
 
 SCAN_INTERVAL = timedelta(seconds=2)
 
@@ -31,6 +35,8 @@ switches_default = {
     PARAM_INTERNET_WEATHER: (SWITCH_INTERNET_WEATHER, "mdi:weather-partly-cloudy"),
     PARAM_CH_AUTO_FUNCTION: (SWITCH_CH_AUTO_FUNCTION, "mdi:radiator"),
     PARAM_THERMAL_CLEANSE_FUNCTION: (SWITCH_THERMAL_CLEANSE_FUNCTION, "mdi:allergy"),
+    PARAM_DHW_BOOST: (SWITCH_DHW_BOOST, "mdi:water-boiler"),
+    PARAM_HP_QUIETE_MODE: (SWITCH_HP_QUIETE_MODE, "mdi:volume-mute"),
 }
 SWITCHES = deepcopy(switches_default)
 for param in switches_default:

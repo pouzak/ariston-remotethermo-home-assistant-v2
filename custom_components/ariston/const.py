@@ -131,6 +131,9 @@ PARAM_COOLING_FLOW_OFFSET = "ch_cooling_flow_offset"
 PARAM_CH_DEROGA_TEMPERATURE = "ch_deroga_temperature"
 PARAM_VERSION = 'integration_version'
 PARAM_RESISTOR = "hp_resistor"
+PARAM_DHW_BOOST = "dhw_boost"
+PARAM_HP_QUIETE_MODE = "hp_quiete_mode"
+
 
 ZONED_PARAMS = [
     PARAM_CH_FLAME,

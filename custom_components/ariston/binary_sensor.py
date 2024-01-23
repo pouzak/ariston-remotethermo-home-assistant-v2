@@ -28,7 +28,9 @@ from .const import (
     VALUE,
     VAL_ON,
     ZONED_PARAMS,
-    PARAM_RESISTOR
+    PARAM_RESISTOR,
+    PARAM_DHW_BOOST,
+    PARAM_HP_QUIETE_MODE
 )
 
 BINARY_SENSOR_CH_FLAME = "CH Flame"
@@ -44,6 +46,8 @@ BINARY_SENSOR_INTERNET_WEATHER = "Internet Weather"
 BINARY_SENSOR_THERMAL_CLEANSE_FUNCTION = "Thermal Cleanse Function"
 BINARY_SENSOR_CH_PILOT = "CH Pilot"
 BINARY_SENSOR_RESISTOR = "Resistor"
+BINARY_SENSOR_DHW_BOOST = "DHW Boost"
+BINARY_SENSOR_QUIETE_MODE = "HP Silent mode"
 
 SCAN_INTERVAL = timedelta(seconds=2)
 
@@ -72,6 +76,8 @@ binary_sensors_default = {
     ),
     PARAM_CH_PILOT: (BINARY_SENSOR_CH_PILOT, None, "mdi:head-cog-outline"),
     PARAM_RESISTOR: (BINARY_SENSOR_RESISTOR, None, "mdi:resistor"),
+    PARAM_DHW_BOOST: (BINARY_SENSOR_DHW_BOOST, None, "mdi:water-boiler"),
+    PARAM_HP_QUIETE_MODE: (BINARY_SENSOR_QUIETE_MODE, None, "mdi:volume-off")
 }
 BINARY_SENSORS = deepcopy(binary_sensors_default)
 for param in binary_sensors_default:
